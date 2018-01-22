@@ -1,0 +1,9 @@
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\bin\Debug\MultiBinder.exe
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\bin\Debug\MultiBinder.pdb
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\obj\Debug\MultiBinder.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\obj\Debug\MultiBinder.Form1.resources
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\obj\Debug\MultiBinder.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\obj\Debug\MultiBinder.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\obj\Debug\MultiBinder.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\obj\Debug\MultiBinder.exe
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\MultiBinder\MultiBinder\obj\Debug\MultiBinder.pdb
