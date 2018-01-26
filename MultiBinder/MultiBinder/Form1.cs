@@ -16,8 +16,7 @@ namespace MultiBinder
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
         }
-
-        string stub = Properties.Resources.Base64 + "\n";
+        string scriptpath = Path.GetTempPath() + "stub.au3";     
         string output = null;
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,7 +67,7 @@ namespace MultiBinder
 
         private void thread_DoWork(object sender, DoWorkEventArgs e)
         {
-            string scriptpath = Path.GetTempPath() + "stub.au3";
+            string stub = Properties.Resources.Base64 + "\n";
             foreach (ListViewItem item in listView1.Items)
             {
                 string binder = Properties.Resources.Binder;
