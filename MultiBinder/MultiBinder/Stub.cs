@@ -26,17 +26,30 @@ class Stub
         return Convert.ToBase64String(array);
     }
 
-    public static string ChunkBase64(string base64, string varname)
+    public static string ChuckSplit(string toSplit, string var, int chunkSize)
     {
-        int chunkSize = 400;
-        int stringLength = base64.Length;
-        string splitted = "\nLocal $" + varname + "\n";
-        for (int i = 0; i < stringLength; i += chunkSize)
+        int strlength = toSplit.Length;
+
+        int chunk = (int)Math.Ceiling((decimal)strlength / (decimal)chunkSize);
+        var strarray = new string[chunk];
+
+        int lengthRemaining = strlength;
+
+        for (int i = 0; i < chunk; i++)
         {
-            if (i + chunkSize > stringLength) chunkSize = stringLength - i;
-            string commande = "$" + varname + " &= '" + base64.Substring(i, chunkSize) + "'\n";
-            splitted += commande;
+            int lengthToUse = Math.Min(lengthRemaining, chunkSize);
+            int startIndex = chunkSize * i;
+            strarray[i] = toSplit.Substring(startIndex, lengthToUse);
+
+            lengthRemaining = lengthRemaining - lengthToUse;
         }
-        return splitted;
+
+        StringBuilder sb = new StringBuilder();
+        sb.Append("\nLocal $" + var + "\n");
+        foreach (string str in strarray)
+        {
+            sb.AppendLine("$" + var + " &= '" + str + "'");
+        }
+        return sb.ToString() + "\n";
     }
 }

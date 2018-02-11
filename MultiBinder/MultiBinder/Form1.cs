@@ -76,7 +76,7 @@ namespace MultiBinder
                     .Replace("%path%", Stub.RandomString(10))
                     .Replace("%filename%", Path.GetFileName(item.Text))
                     .Replace("%var%", varname)
-                    .Replace("%base64%", Stub.ChunkBase64(Stub.Base64String(item.Text), varname));
+                    .Replace("%base64%", Stub.ChuckSplit(Stub.Base64String(item.Text), varname, 400));
                 stub += binder + "\n";
             }
 
